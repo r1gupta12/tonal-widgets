@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
     <!-- Package visibility (Android 11+) so we can check which apps can handle each tap. -->
     <queries>
         <package android:name="com.google.android.googlequicksearchbox" />
@@ -34,6 +39,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".MonoDateWidget" android:exported="false" android:label="@string/w_mono_date">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_mono_date" />
+        </receiver>
+
+        <receiver android:name=".MonoWeatherWidget" android:exported="false" android:label="@string/w_mono_weather">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_mono_weather" />
+        </receiver>
+
+        <receiver android:name=".WeatherPillWidget" android:exported="false" android:label="@string/w_weather_pill">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_weather_pill" />
+        </receiver>
+
+        <receiver android:name=".WeatherBlobWidget" android:exported="false" android:label="@string/w_weather_blob">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_weather_blob" />
+        </receiver>
+
+        <receiver android:name=".CookieClockWidget" android:exported="false" android:label="@string/w_cookie">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_cookie" />
+        </receiver>
+
+        <receiver android:name=".StackedClockWidget" android:exported="false" android:label="@string/w_stacked">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_stacked" />
+        </receiver>
+
+        <receiver android:name=".LiquidBatteryWidget" android:exported="false" android:label="@string/w_liquid">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_liquid" />
+        </receiver>
 
         <receiver android:name=".ClockWidget" android:exported="false" android:label="@string/w_clock">
             <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>

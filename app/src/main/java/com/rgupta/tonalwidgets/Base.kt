@@ -27,6 +27,13 @@ abstract class BaseWidget : AppWidgetProvider() {
         }
 
         val ALL: List<Class<out BaseWidget>> = listOf(
+            MonoDateWidget::class.java,
+            MonoWeatherWidget::class.java,
+            WeatherPillWidget::class.java,
+            WeatherBlobWidget::class.java,
+            CookieClockWidget::class.java,
+            StackedClockWidget::class.java,
+            LiquidBatteryWidget::class.java,
             ClockWidget::class.java,
             PillClockWidget::class.java,
             DateWidget::class.java,

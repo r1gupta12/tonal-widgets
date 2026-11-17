@@ -11,4 +11,5 @@
     <color name="w_tert">@android:color/system_accent3_200</color>
     <color name="w_on_tert">@android:color/system_accent3_900</color>
     <color name="w_track">@android:color/system_accent1_200</color>
+    <color name="w_mono">#141414</color>
 </resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_pill_sec"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="22dp">
+
+    <ImageView
+        android:id="@+id/wx_icon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/shape_circle_surface"
+        android:contentDescription="@null"
+        android:padding="14dp"
+        android:src="@drawable/ic_wx_sun"
+        android:tint="@color/w_accent" />
+
+    <TextView
+        android:id="@+id/wx_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="sans-serif-black"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.04"
+        android:text="--°"
+        android:textColor="@color/w_on_sec"
+        android:textSize="34sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/wx_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:text="@string/wx_set_place"
+            android:textColor="@color/w_on_sec"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/wx_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/w_on_sec"
+            android:alpha="0.8"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/wx_hilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="@color/w_on_sec"
+        android:textSize="13sp" />
+</LinearLayout>

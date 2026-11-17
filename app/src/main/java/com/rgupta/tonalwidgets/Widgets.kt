@@ -88,7 +88,9 @@ class BatteryWidget : BaseWidget() {
     }
 
     override fun onDisabled(context: Context) {
-        BatteryWorker.cancel(context)
+        val m = android.appwidget.AppWidgetManager.getInstance(context)
+        val liquid = android.content.ComponentName(context, LiquidBatteryWidget::class.java)
+        if (m.getAppWidgetIds(liquid).isEmpty()) BatteryWorker.cancel(context)
     }
 }
 
@@ -96,6 +98,7 @@ class BatteryWidget : BaseWidget() {
 class BatteryWorker(context: Context, params: WorkerParameters) : Worker(context, params) {
     override fun doWork(): Result {
         BaseWidget.refresh(applicationContext, BatteryWidget::class.java)
+        BaseWidget.refresh(applicationContext, LiquidBatteryWidget::class.java)
         return Result.success()
     }
 

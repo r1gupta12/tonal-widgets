@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start|center_vertical"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/wx_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_wx_moon"
+        android:tint="@color/w_mono" />
+
+    <TextView
+        android:id="@+id/wx_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:includeFontPadding="false"
+        android:text="--°C"
+        android:textColor="@color/w_mono"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/wx_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wx_set_place"
+        android:textColor="@color/w_mono"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/wx_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/w_mono"
+        android:textSize="16sp" />
+</LinearLayout>

@@ -11,15 +11,25 @@ android {
         applicationId = "com.rgupta.tonalwidgets"
         minSdk = 31          // Android 12+ — needed for Material You dynamic colours
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
+    }
+
+    // A fixed sideload key kept in the repo, so every CI build can install as an
+    // update over the previous one. Make a private key before publishing to Play.
+    signingConfigs {
+        create("sideload") {
+            storeFile = file("sideload.keystore")
+            storePassword = "tonalwidgets"
+            keyAlias = "tonal"
+            keyPassword = "tonalwidgets"
+        }
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            // Signed with the debug key so you can sideload the release build directly.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("sideload")
         }
     }
 

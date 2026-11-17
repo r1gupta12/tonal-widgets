@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/shape_scallop8" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/wx_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_wx_sun"
+            android:tint="@color/w_accent" />
+
+        <TextView
+            android:id="@+id/wx_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.04"
+            android:text="--°"
+            android:textColor="@color/w_on_sec"
+            android:textSize="44sp" />
+
+        <TextView
+            android:id="@+id/wx_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:maxWidth="120dp"
+            android:text="@string/wx_set_place"
+            android:textColor="@color/w_on_sec"
+            android:textSize="13sp" />
+    </LinearLayout>
+</FrameLayout>
