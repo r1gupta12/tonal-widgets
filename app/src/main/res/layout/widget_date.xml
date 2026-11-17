@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_tert"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:format12Hour="EEEE"
+        android:format24Hour="EEEE"
+        android:letterSpacing="0.1"
+        android:textAllCaps="true"
+        android:textColor="@color/w_on_tert"
+        android:textSize="13sp" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:format12Hour="d"
+        android:format24Hour="d"
+        android:includeFontPadding="false"
+        android:textColor="@color/w_on_tert"
+        android:textSize="64sp" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:format12Hour="MMMM"
+        android:format24Hour="MMMM"
+        android:textColor="@color/w_on_tert"
+        android:textSize="15sp" />
+</LinearLayout>

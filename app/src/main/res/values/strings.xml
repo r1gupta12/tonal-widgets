@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tonal Widgets</string>
+    <string name="gallery_hint">Widgets that follow your wallpaper colours. Tap a button to drop one on your home screen, or long-press your home screen → Widgets → Tonal Widgets.</string>
+    <string name="add_to_home">Add to home screen</string>
+    <string name="pin_unsupported">Your launcher doesn’t support this — add it from the home-screen widget picker instead.</string>
+    <string name="w_clock">Big clock</string>
+    <string name="w_pill">Pill clock</string>
+    <string name="w_date">Date tile</string>
+    <string name="w_battery">Battery ring</string>
+    <string name="w_quote">Quote of the day</string>
+    <string name="w_search">Search bar</string>
+    <string name="w_quick">Quick actions</string>
+    <string name="d_clock">Large time and date. Tap to open alarms.</string>
+    <string name="d_pill">Time with a day bubble.</string>
+    <string name="d_date">Today’s date. Tap for calendar.</string>
+    <string name="d_battery">Battery level with a progress ring.</string>
+    <string name="d_quote">A new quote daily — tap for another.</string>
+    <string name="d_search">Search and voice in one pill.</string>
+    <string name="d_quick">Phone, camera, maps and flashlight.</string>
+    <string name="charging">Charging</string>
+    <string name="battery">Battery</string>
+    <string name="quote_placeholder">Tap for a quote</string>
+    <string name="search_hint">Search</string>
+</resources>

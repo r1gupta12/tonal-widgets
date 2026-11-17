@@ -1,0 +1,45 @@
+name: Build APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: android-actions/setup-android@v3
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build release APK
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon
+          cp app/build/outputs/apk/release/app-release.apk TonalWidgets.apk
+
+      - name: Upload as build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: TonalWidgets-apk
+          path: TonalWidgets.apk
+
+      - name: Publish to Releases (easy phone download)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="build-${{ github.run_number }}"
+          gh release create "$TAG" TonalWidgets.apk \
+            --title "Tonal Widgets $TAG" \
+            --notes "Download TonalWidgets.apk on your phone and open it to install."

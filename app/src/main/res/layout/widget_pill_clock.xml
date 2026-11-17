@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_pill_sec"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="6dp">
+
+    <FrameLayout
+        android:id="@+id/pill_day"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/shape_circle_accent">
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:format12Hour="d"
+            android:format24Hour="d"
+            android:textColor="@color/w_on_accent"
+            android:textSize="24sp" />
+    </FrameLayout>
+
+    <TextClock
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-medium"
+        android:format12Hour="h:mm a"
+        android:format24Hour="HH:mm"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/w_on_sec"
+        android:textSize="30sp" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:fontFamily="sans-serif-medium"
+        android:format12Hour="EEE\nMMM"
+        android:format24Hour="EEE\nMMM"
+        android:gravity="end"
+        android:textAllCaps="true"
+        android:textColor="@color/w_on_sec"
+        android:textSize="13sp" />
+</LinearLayout>
